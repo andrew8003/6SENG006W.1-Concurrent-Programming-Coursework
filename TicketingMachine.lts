@@ -1,0 +1,26 @@
+const MAX_PAPERS = 3 // Maximum number of papers in the printer
+set ACTIONS = {requestPrint, print, requestRefill, refill, release}
+
+// Initialize printer with a specified paper count and manage printing and refilling
+PAPER_HANDLER (PAPER_COUNT = MAX_PAPERS) = PAPER_HANDLER[PAPER_COUNT],
+PAPER_HANDLER[p: 0..PAPER_COUNT] =
+	if (p > 0)
+	then (requestPrint -> print -> release -> PAPER_HANDLER[p-1])
+	else (requestRefill -> refill -> release -> PAPER_HANDLER[MAX_PAPERS]).
+
+// Initialize student and print a set number of documents
+STUDENT (DOCUMENT_COUNT = 1) = STUDENT[DOCUMENT_COUNT],
+STUDENT[d : 1..DOCUMENT_COUNT] = (
+	requestPrint -> print[d] ->
+		if (d > 1)
+		then (release -> STUDENT[d-1])
+		else (release -> END) // Completes the last document
+) + ACTIONS / {print/print[d: 1..DOCUMENT_COUNT]}. // Expose print[d] actions as "print"
+
+MAINTENANCE_TECH = (
+	requestRefill -> refill -> release -> MAINTENANCE_TECH |
+	wait -> MAINTENANCE_TECH
+) + ACTIONS.
+
+// Parallel composition of the overall printing system
+|| PRINT_SYSTEM = (s3: STUDENT(3) || s2: STUDENT(2) || t: MAINTENANCE_TECH || {s3, s2, t} :: PAPER_HANDLER).

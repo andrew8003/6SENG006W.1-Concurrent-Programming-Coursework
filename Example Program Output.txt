@@ -1,0 +1,22 @@
+Please Type How Many Tickets You Would Like To Print Below -- 
+Current Paper Status: 1
+Current Toner Status: 3
+Enter the number of tickets to print (max 3): 3
+Passenger printing ticket 1
+Out of paper. Refilling...
+Passenger printing ticket 2
+Passenger printing ticket 3
+Out of toner. Refilling...
+Toner Refilled
+Printing Ticket
+Current Paper Status: 8
+Current Toner Status: 10
+Enter the number of tickets to print (max 3): 2
+Passenger printing ticket 1
+Passenger printing ticket 2
+Printing Ticket
+Current Paper Status: 6
+Current Toner Status: 8
+Enter the number of tickets to print (max 3): 5
+Invalid input. Please enter a number between 1 and 3.
+Enter the number of tickets to print (max 3):
