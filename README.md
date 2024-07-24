@@ -1,6 +1,13 @@
-Images From The LTSA Tool -
+# Year 3 Concurrent Programming Coursework: Ticketing Machine
 
-![Screenshot 2024-03-08 045610](https://github.com/andrew8003/6SENG006W.1-Concurrent-Programming-Coursework/assets/124158183/9d227c09-4f7d-44b0-838d-65da88b63eef)
-![Screenshot 2024-03-08 045702](https://github.com/andrew8003/6SENG006W.1-Concurrent-Programming-Coursework/assets/124158183/5b22d034-e88d-4b46-a5b6-d3b46768940e)
-![Screenshot 2024-03-08 045639](https://github.com/andrew8003/6SENG006W.1-Concurrent-Programming-Coursework/assets/124158183/39f519dc-0bbf-44a0-9e09-06e162b563f6)
-![Screenshot 2024-03-08 045621](https://github.com/andrew8003/6SENG006W.1-Concurrent-Programming-Coursework/assets/124158183/d7ee7110-10c3-4f0d-a3fa-60a16b0ca25b)
+This coursework project involves creating a ticketing machine using multithreading concepts. The project is developed to demonstrate concurrent programming techniques. Additionally, `.lts` files are provided, which can be used with the LTSA (Labelled Transition System Analyser) tool from Imperial College London to visualize the process of the machine.
+
+## Features
+
+- **Multithreading:** Implements a ticketing machine using concurrent programming to handle multiple threads.
+- **LTSA Visualization:** `.lts` files included for process visualization using the LTSA tool.
+
+## Technologies Used
+
+- **Java:** For implementing the multithreading ticketing machine.
+- **LTSA Tool:** For visualizing the process (requires LTSA from Imperial College London).
